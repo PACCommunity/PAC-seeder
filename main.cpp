@@ -356,15 +356,11 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"dnsseed1.paccoin.io", "dnsseed2.paccoin.io", ""};
-static const string testnet_seeds[] = {"testnet-dnsseed.paccoin.io", ""};
+static const string mainnet_seeds[] = {"seed1.paccoin.io", "seed2.paccoin.io", ""};
+static const string testnet_seeds[] = {"testnet-seed.paccoin.io", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
-    db.Add(CService("209.250.251.184", GetDefaultPort()), true);
-    db.Add(CService("108.61.252.138", GetDefaultPort()), true);
-  }
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
