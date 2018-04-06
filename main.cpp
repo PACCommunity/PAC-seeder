@@ -357,7 +357,7 @@ extern "C" void* ThreadStats(void*) {
 }
 
 static const string mainnet_seeds[] = {"static-seed-alfa.paccoin.io","static-seed-bravo.paccoin.io","static-seed-charlie.paccoin.io","static-seed-delta.paccoin.io","static-seed-echo.paccoin.io",""};
-static const string testnet_seeds[] = {"testnet-static-seed.paccoin.io", ""};
+static const string testnet_seeds[] = {"testnet-static-seed.paccoin.io","testnet-static-seed.paccoin-dos.io",""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
